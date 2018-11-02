@@ -27,4 +27,9 @@ class ExampleTest extends TestCase
         $response = $this->get('/about');
         $response->assertStatus(200);
     }
+    public function testContactTest()
+    {
+        $response = $this->get('/contact');
+        $response->assertStatus(200);
+    }
 }
