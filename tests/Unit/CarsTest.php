@@ -38,10 +38,10 @@ class CarsTest extends TestCase
         factory(Car::class, 1)->create();
         $this->assertTrue($car->forceDelete());
     }
-//
-//    public function testCountCar()
-//    {
-//        $carCount = Car::count();
-//        $this->assertEquals(50, $carCount);
-//    }
+
+    public function testCountCar()
+    {
+        $carCount = Car::count();
+        $this->assertEquals(50, $carCount);
+    }
 }
