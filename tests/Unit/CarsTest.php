@@ -31,12 +31,13 @@ class CarsTest extends TestCase
         $car->save();
         $this->assertEquals(2000, $car->year);
     }
-//
-//    public function testDeleteCar()
-//    {
-//        $car = Car::inRandomOrder()->first();
-//        $this->assertTrue($car->forceDelete());
-//    }
+
+    public function testDeleteCar()
+    {
+        $car = Car::inRandomOrder()->first();
+        factory(Car::class, 1)->create();
+        $this->assertTrue($car->forceDelete());
+    }
 //
 //    public function testCountCar()
 //    {
