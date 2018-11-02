@@ -69,10 +69,10 @@
             <div class="card-header">
                 <ul class="nav nav-pills card-header-pills">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link active" href="/about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact</a>
@@ -83,35 +83,43 @@
                 </ul>
             </div>
         </div>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <main role="main" class="container">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+            <div class="starter-template">
+                <h1>About the Project</h1>
+                <p class="lead">
+                    1.  Write a feature test to check if the register return a 200 status code.<br>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Welcome to the Home Page.
-                </div>
+                    2.  Write a feature test to check if the login pages return a 200 status code.<br>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                    3.  Write a feature test to check if your about page returns a 200 status code.<br>
+
+                    4.  Write a feature test to check if your contact page returns a 200 status code.<br>
+
+                    5.  Create a unit test to insert a user into the users table.<br>
+
+                    6.  Create a unit test to update the name of a user in the database to Steve Smith.<br>
+
+                    7.  Create a unit test to delete a user in the database.<br>
+
+                    8.  Create a unit test to count the number of records inserted by the database seed.  i.e. $userCount = 50.<br>
+
+                    9.  Create a unit test to test inserting a car.<br>
+
+                    10.  Create a unit test to test updating a car year to 2000.<br>
+
+                    11. Create a unit test to test deleting a car.<br>
+
+                    12.  Create a unit test to test to count the number of records inserted by the database seed.  i.e. $carCount = 50.<br>
+
+                    13.   Create a unit test to check if a car's year is an integer.<br>
+
+                    14.  Create a unit test to check if a car's make is either ford / honda / toyota.<br>
+
+                    15.  Create a unit tests to check that the model is a string.<br>
+                </p>
             </div>
-        </div>
+
+        </main><!-- /.container -->
     </body>
 </html>
