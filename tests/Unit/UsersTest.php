@@ -37,4 +37,10 @@ class UsersTest extends TestCase
         $user = User::inRandomOrder()->first();
         $this->assertTrue($user->forceDelete());
     }
+
+    public function testCountUser()
+    {
+        $userCount = User::count();
+        $this->assertEquals(50, $userCount);
+    }
 }
