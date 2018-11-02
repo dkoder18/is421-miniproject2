@@ -31,4 +31,10 @@ class UsersTest extends TestCase
         $user->save();
         $this->assertEquals("Steve Smith", $user->name);
     }
+
+    public function testDeleteUser()
+    {
+        $user = User::inRandomOrder()->first();
+        $this->assertTrue($user->forceDelete());
+    }
 }
