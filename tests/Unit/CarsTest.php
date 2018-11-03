@@ -20,7 +20,6 @@ class CarsTest extends TestCase
         $car->model = 'Fusion';
         $car->year = 2014;
         $car->save();
-//        dd($car);
         $this->assertTrue($car->forceDelete());
     }
 
@@ -58,4 +57,12 @@ class CarsTest extends TestCase
         $make = $car->make;
         $this->assertContains($make, ['Ford', 'Toyota', 'Honda']);
     }
+
+    public function testCarModel()
+    {
+        $car = Car::inRandomOrder()->first();
+        $model = $car->model;
+        $this->assertInternalType('string', $model);
+    }
+
 }
