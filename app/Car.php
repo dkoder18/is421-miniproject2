@@ -16,7 +16,7 @@ class Car extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'make', 'model', 'passwyearord',
+        'make', 'model', 'year',
     ];
 
     /**

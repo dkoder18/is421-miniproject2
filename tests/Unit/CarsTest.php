@@ -44,4 +44,11 @@ class CarsTest extends TestCase
         $carCount = Car::count();
         $this->assertEquals(50, $carCount);
     }
+
+    public function testCheckInt()
+    {
+        $car = Car::inRandomOrder()->first();
+        $year = $car->year;
+        $this->assertInternalType('string', $year);
+    }
 }
